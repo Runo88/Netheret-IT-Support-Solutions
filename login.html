@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in — Netheret IT Support Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="login-shell" id="main">
+  <div class="login-card">
+    <div class="spectrum-bar" role="img" aria-label="Netheret brand spectrum, graphite to lemon-lime"></div>
+
+    <div class="login-brand">
+      <span class="name">Netheret</span>
+      <span class="tag">IT Support Solutions — Ops</span>
+    </div>
+    <p class="login-intro">Sign in to log tickets, manage on-site jobs, and view team performance.</p>
+
+    <form id="login-form" novalidate>
+      <div class="field">
+        <label for="email">Work email</label>
+        <input type="email" id="email" name="email" placeholder="you@netheret.co.uk" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <div class="field-row">
+        <label class="checkbox-row"><input type="checkbox" id="remember" name="remember">Stay signed in</label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit" class="btn-primary">Sign in</button>
+    </form>
+
+    <div class="login-foot">Need access? <a href="#">Contact your dispatch lead</a></div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('login-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    window.location.href = 'dashboard.html';
+  });
+</script>
+</body>
+</html>

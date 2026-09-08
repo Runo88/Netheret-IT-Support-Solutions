@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netheret IT Support Solutions — Operations Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+
+  <aside class="sidebar">
+    <a class="brand" href="dashboard.html">Netheret<span>IT Support Solutions — Ops</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="dashboard.html#overview" class="active"><span class="dot"></span>Overview</a></li>
+        <li><a href="dashboard.html#tickets"><span class="dot"></span>Support tickets</a></li>
+        <li><a href="dashboard.html#schedule"><span class="dot"></span>Job schedule</a></li>
+        <li><a href="dashboard.html#insights"><span class="dot"></span>Performance insights</a></li>
+        <li><a href="dashboard.html#knowledge"><span class="dot"></span>Knowledge base</a></li>
+        <li><a href="dashboard.html#accessibility"><span class="dot"></span>Accessibility</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-foot">Signed in as <strong>J. Adeyemi</strong><br>Dispatch Lead · Tier 2/3 desk<br><a href="login.html">Sign out</a></div>
+  </aside>
+
+  <main id="main">
+
+    <header class="status-strip" id="overview">
+      <div class="section-head">
+        <h2>System &amp; client environment health</h2>
+        <p>Aggregated across 5 monitored client environments, updated 4 minutes ago</p>
+      </div>
+      <div class="spectrum-bar" role="img" aria-label="Health spectrum from critical to optimal, current aggregate leans toward stable to good"></div>
+      <div class="spectrum-legend">
+        <span>Critical</span><span>Degraded</span><span>Stable</span><span>Good</span><span>Optimal</span>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-main">
+          <div class="label">Open tickets right now</div>
+          <div class="value">42</div>
+          <div class="sub">7 unassigned · 3 breaching SLA within the hour</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">SLA compliance (30d)</div>
+          <div class="value">94.2%</div>
+          <div class="trend">▲ 1.8pp vs previous month</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">Avg first response</div>
+          <div class="value">11m</div>
+          <div class="trend">▼ 2m faster than target</div>
+        </div>
+        <div class="stat-card">
+          <div class="label">On-site jobs today</div>
+          <div class="value">4</div>
+          <div class="trend">3 technicians rostered</div>
+        </div>
+      </div>
+    </header>
+
+    <section id="tickets">
+      <div class="section-head">
+        <h2>Support ticket queue</h2>
+        <div class="tabs" role="tablist" aria-label="Filter tickets by tier">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="T1">Tier 1</button>
+          <button data-filter="T2">Tier 2</button>
+          <button data-filter="T3">Tier 3</button>
+        </div>
+      </div>
+      <div class="card" style="padding:0; overflow-x:auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>Ticket</th><th>Client</th><th>Issue</th><th>Tier</th><th>Assignee</th><th>Status</th><th>SLA</th>
+            </tr>
+          </thead>
+          <tbody id="ticket-body">
+            <tr data-tier="T2">
+              <td><a class="ticket-id" href="ticket.html">NIT-1042</a></td>
+              <td>Camberwell Retail Ltd</td>
+              <td>VPN tunnel dropping intermittently on branch router</td>
+              <td><span class="badge t2">Tier 2</span></td>
+              <td>R. Osei</td>
+              <td>In progress</td>
+              <td><span class="sla critical"><span class="dot"></span>0:42 left</span></td>
+            </tr>
+            <tr data-tier="T3">
+              <td class="ticket-id">NIT-1041</td>
+              <td>Whitfield &amp; Partners Legal</td>
+              <td>Onsite server reboot required after failed patch</td>
+              <td><span class="badge t3">Tier 3</span></td>
+              <td>M. Doyle</td>
+              <td>Scheduled</td>
+              <td><span class="sla watch"><span class="dot"></span>3:10 left</span></td>
+            </tr>
+            <tr data-tier="T1">
+              <td class="ticket-id">NIT-1039</td>
+              <td>Camberwell Retail Ltd</td>
+              <td>POS terminal will not authenticate card reader</td>
+              <td><span class="badge t1">Tier 1</span></td>
+              <td>A. Farrow</td>
+              <td>Open</td>
+              <td><span class="sla good"><span class="dot"></span>5:50 left</span></td>
+            </tr>
+            <tr data-tier="T1">
+              <td class="ticket-id">NIT-1037</td>
+              <td>Solaris Dental Group</td>
+              <td>Locked account, staff member needs password reset</td>
+              <td><span class="badge t1">Tier 1</span></td>
+              <td>A. Farrow</td>
+              <td>Resolved</td>
+              <td><span class="sla good"><span class="dot"></span>Met</span></td>
+            </tr>
+            <tr data-tier="T2">
+              <td class="ticket-id">NIT-1035</td>
+              <td>Whitfield &amp; Partners Legal</td>
+              <td>Printer fleet offline after firmware update</td>
+              <td><span class="badge t2">Tier 2</span></td>
+              <td>R. Osei</td>
+              <td>In progress</td>
+              <td><span class="sla critical"><span class="dot"></span>1:15 left</span></td>
+            </tr>
+            <tr data-tier="T2">
+              <td class="ticket-id">NIT-1030</td>
+              <td>Halkin Property Group</td>
+              <td>Wi-Fi dead zone reported across second floor office</td>
+              <td><span class="badge t2">Tier 2</span></td>
+              <td>K. Ibáñez</td>
+              <td>Open</td>
+              <td><span class="sla good"><span class="dot"></span>9:00 left</span></td>
+            </tr>
+            <tr data-tier="T3" class="is-breached">
+              <td class="ticket-id">NIT-1024</td>
+              <td>Solaris Dental Group</td>
+              <td>Nightly backup job has failed silently for 3 nights</td>
+              <td><span class="badge t3">Tier 3</span></td>
+              <td>M. Doyle</td>
+              <td>Breached</td>
+              <td><span class="sla breached"><span class="dot"></span>Overdue 2:05</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="split-row">
+      <section id="schedule">
+        <div class="section-head"><h2>Today's on-site schedule</h2></div>
+        <div class="card">
+          <div class="agenda-item">
+            <div class="agenda-time">09:00</div>
+            <div class="agenda-avatar">MD</div>
+            <div class="agenda-body">
+              <div class="job">Onsite server reboot &amp; patch verification</div>
+              <div class="meta">Whitfield &amp; Partners Legal · Tier 3 · Maintenance · M. Doyle</div>
+            </div>
+          </div>
+          <div class="agenda-item">
+            <div class="agenda-time">11:30</div>
+            <div class="agenda-avatar">KI</div>
+            <div class="agenda-body">
+              <div class="job">Wi-Fi survey and additional access point install</div>
+              <div class="meta">Halkin Property Group · Tier 2 · Install · K. Ibáñez</div>
+            </div>
+          </div>
+          <div class="agenda-item">
+            <div class="agenda-time">13:00</div>
+            <div class="agenda-avatar">RO</div>
+            <div class="agenda-body">
+              <div class="job">Branch router swap to resolve VPN handshake fault</div>
+              <div class="meta">Camberwell Retail Ltd · Tier 2 · Emergency · R. Osei</div>
+            </div>
+          </div>
+          <div class="agenda-item">
+            <div class="agenda-time">15:30</div>
+            <div class="agenda-avatar">MD</div>
+            <div class="agenda-body">
+              <div class="job">Backup server investigation and job rebuild</div>
+              <div class="meta">Solaris Dental Group · Tier 3 · Maintenance · M. Doyle</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="insights">
+        <div class="section-head"><h2>Performance insights</h2></div>
+        <div class="card">
+          <div class="chart-block">
+            <h3>Tickets logged, last 7 days</h3>
+            <svg class="trend-svg" viewBox="0 0 280 90" preserveAspectRatio="none" role="img" aria-label="Line chart showing ticket volume rising from 38 to 60 then settling at 42 over the last seven days">
+              <polyline points="0,52 46,38 93,45 140,20 186,32 233,4 280,40" fill="none" stroke="#cbef43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="280" cy="40" r="3.5" fill="#cbef43"/>
+            </svg>
+          </div>
+          <div class="chart-block">
+            <h3>Open workload by tier</h3>
+            <div class="workload-row">
+              <span class="wl-label">T1</span>
+              <div class="workload-track"><div class="workload-fill" style="width:60%; background:var(--muted-teal);"></div></div>
+              <span class="wl-pct">60%</span>
+            </div>
+            <div class="workload-row">
+              <span class="wl-label">T2</span>
+              <div class="workload-track"><div class="workload-fill" style="width:25%; background:var(--blue-slate);"></div></div>
+              <span class="wl-pct">25%</span>
+            </div>
+            <div class="workload-row">
+              <span class="wl-label">T3</span>
+              <div class="workload-track"><div class="workload-fill" style="width:15%; background:var(--lemon-lime);"></div></div>
+              <span class="wl-pct">15%</span>
+            </div>
+          </div>
+          <div class="chart-block">
+            <h3>First response time vs target</h3>
+            <div class="response-stat"><span class="value">11m</span><span class="unit">actual, 30-day average</span></div>
+            <div class="workload-track"><div class="workload-fill" style="width:73%; background:var(--light-green);"></div></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="split-row">
+      <section id="knowledge">
+        <div class="section-head"><h2>Knowledge base</h2></div>
+        <div class="card">
+          <div class="kb-search">
+            <label for="kb-search-input" style="position:absolute; left:-9999px;">Search the knowledge base</label>
+            <input id="kb-search-input" type="text" placeholder="Search articles, error codes, or symptoms…">
+            <button type="button">Search</button>
+          </div>
+          <div class="kb-item">
+            <div class="title">Diagnosing VPN handshake failures on branch routers</div>
+            <div class="tags"><span>Networking</span><span>Tier 1</span></div>
+          </div>
+          <div class="kb-item">
+            <div class="title">Resetting a locked POS terminal card-reader login</div>
+            <div class="tags"><span>Retail systems</span><span>Tier 1</span></div>
+          </div>
+          <div class="kb-item">
+            <div class="title">Standard checklist: onsite server reboot after a failed patch</div>
+            <div class="tags"><span>Infrastructure</span><span>Tier 3</span></div>
+          </div>
+          <div class="kb-item">
+            <div class="title">Wi-Fi dead zone triage for open-plan offices</div>
+            <div class="tags"><span>Networking</span><span>Tier 2</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="accessibility">
+        <div class="section-head"><h2>Accessibility</h2></div>
+        <div class="card">
+          <div class="a11y-option">
+            <div>
+              <div class="title">Larger text</div>
+              <div class="desc">Increases base text size across the dashboard.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggle-large-text" aria-label="Toggle larger text">
+              <span class="track"></span><span class="thumb"></span>
+            </label>
+          </div>
+          <div class="a11y-option">
+            <div>
+              <div class="title">High contrast</div>
+              <div class="desc">Increases contrast between text and background surfaces.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggle-contrast" aria-label="Toggle high contrast mode">
+              <span class="track"></span><span class="thumb"></span>
+            </label>
+          </div>
+          <div class="a11y-option">
+            <div>
+              <div class="title">Reduce motion</div>
+              <div class="desc">Turns off non-essential transitions and animation.</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggle-motion" aria-label="Toggle reduced motion">
+              <span class="track"></span><span class="thumb"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="page-foot">Netheret IT Support Solutions · Operations dashboard prototype · Data shown is illustrative</footer>
+  </main>
+</div>
+
+<script>
+  // Ticket tier filter
+  const tabs = document.querySelectorAll('.tabs button');
+  const rows = document.querySelectorAll('#ticket-body tr');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      rows.forEach(row => {
+        row.classList.toggle('is-hidden', filter !== 'all' && row.dataset.tier !== filter);
+      });
+    });
+  });
+
+  // Accessibility toggles
+  const root = document.documentElement;
+  document.getElementById('toggle-large-text').addEventListener('change', e => {
+    root.classList.toggle('a11y-large-text', e.target.checked);
+  });
+  document.getElementById('toggle-contrast').addEventListener('change', e => {
+    root.classList.toggle('a11y-high-contrast', e.target.checked);
+  });
+  document.getElementById('toggle-motion').addEventListener('change', e => {
+    root.classList.toggle('a11y-reduce-motion', e.target.checked);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIT-1042 — Netheret IT Support Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+
+  <aside class="sidebar">
+    <a class="brand" href="dashboard.html">Netheret<span>IT Support Solutions — Ops</span></a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="dashboard.html#overview"><span class="dot"></span>Overview</a></li>
+        <li><a href="dashboard.html#tickets" class="active"><span class="dot"></span>Support tickets</a></li>
+        <li><a href="dashboard.html#schedule"><span class="dot"></span>Job schedule</a></li>
+        <li><a href="dashboard.html#insights"><span class="dot"></span>Performance insights</a></li>
+        <li><a href="dashboard.html#knowledge"><span class="dot"></span>Knowledge base</a></li>
+        <li><a href="dashboard.html#accessibility"><span class="dot"></span>Accessibility</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-foot">Signed in as <strong>J. Adeyemi</strong><br>Dispatch Lead · Tier 2/3 desk<br><a href="login.html">Sign out</a></div>
+  </aside>
+
+  <main id="main">
+
+    <div class="breadcrumb"><a href="dashboard.html#tickets">Support tickets</a> / NIT-1042</div>
+
+    <div class="ticket-header">
+      <div>
+        <h1>VPN tunnel dropping intermittently on branch router</h1>
+        <div class="ticket-meta-line">
+          <span class="ticket-id">NIT-1042</span>
+          <span>·</span>
+          <span class="badge t2">Tier 2</span>
+          <span>·</span>
+          <span class="sla critical"><span class="dot"></span>0:42 left</span>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn-secondary">Reassign</button>
+        <button type="button" class="btn-secondary">Escalate to Tier 3</button>
+        <button type="button" class="btn-primary" style="width:auto;">Mark resolved</button>
+      </div>
+    </div>
+
+    <div class="ticket-layout">
+      <div>
+        <section>
+          <div class="card">
+            <div class="detail-grid">
+              <div class="detail-item"><div class="label">Client</div><div class="value">Camberwell Retail Ltd</div></div>
+              <div class="detail-item"><div class="label">Site</div><div class="value">Camberwell High St branch</div></div>
+              <div class="detail-item"><div class="label">Assignee</div><div class="value">R. Osei</div></div>
+              <div class="detail-item"><div class="label">Priority</div><div class="value">High</div></div>
+              <div class="detail-item"><div class="label">Logged</div><div class="value">Today, 08:14</div></div>
+              <div class="detail-item"><div class="label">Status</div><div class="value">In progress</div></div>
+            </div>
+            <div class="ticket-desc">
+              Branch reports the site-to-site VPN tunnel to head office drops every 15–20 minutes, taking card
+              payment authorisation and the shared stock system offline for up to a minute each time. Started
+              after this morning's ISP maintenance window. Router logs show repeated IKE re-negotiation failures.
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-head"><h2>Job progression &amp; stakeholder updates</h2></div>
+          <div class="card timeline">
+            <div class="timeline-item stakeholder">
+              <div class="timeline-avatar">CB</div>
+              <div class="timeline-body">
+                <div class="who-when"><strong>Camberwell Retail Ltd</strong> · store manager · 08:14</div>
+                <div class="msg">Card machines keep losing connection, it's dropping mid-transaction for customers.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-avatar">RO</div>
+              <div class="timeline-body">
+                <div class="who-when"><strong>R. Osei</strong> · Tier 2 support · 08:22</div>
+                <div class="msg">Picked up the ticket. Pulling router logs remotely to confirm whether this is an ISP-side issue or a config fault on our end.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-avatar">RO</div>
+              <div class="timeline-body">
+                <div class="who-when"><strong>R. Osei</strong> · Tier 2 support · 08:41</div>
+                <div class="msg">Confirmed repeated IKE re-negotiation failures on the branch router, timing lines up with this morning's ISP maintenance. Preparing a router swap as the fastest fix.</div>
+              </div>
+            </div>
+            <div class="timeline-item stakeholder">
+              <div class="timeline-avatar">CB</div>
+              <div class="timeline-body">
+                <div class="who-when"><strong>Camberwell Retail Ltd</strong> · store manager · 08:47</div>
+                <div class="msg">Thanks for the update — how long until this is sorted, we're losing sales.</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-avatar">RO</div>
+              <div class="timeline-body">
+                <div class="who-when"><strong>R. Osei</strong> · Tier 2 support · 08:50</div>
+                <div class="msg">On-site swap scheduled for 13:00 today, see job schedule. Configured a temporary failover on the backup line in the meantime to cut the drop frequency.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div>
+        <div class="side-card card">
+          <h3>Scheduled visit</h3>
+          <div class="agenda-item" style="border-bottom:none; padding-bottom:0;">
+            <div class="agenda-time">13:00</div>
+            <div class="agenda-avatar">RO</div>
+            <div class="agenda-body">
+              <div class="job">Branch router swap</div>
+              <div class="meta">Camberwell High St branch · Emergency</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="side-card card">
+          <h3>Related knowledge base articles</h3>
+          <div class="kb-item">
+            <div class="title">Diagnosing VPN handshake failures on branch routers</div>
+            <div class="tags"><span>Networking</span><span>Tier 1</span></div>
+          </div>
+          <div class="kb-item">
+            <div class="title">Failover configuration for retail card payment lines</div>
+            <div class="tags"><span>Retail systems</span><span>Tier 2</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-foot">Netheret IT Support Solutions · Operations dashboard prototype · Data shown is illustrative</footer>
+  </main>
+</div>
+</body>
+</html>
